@@ -1,26 +1,48 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
-import starlight from '@astrojs/starlight';
+import { defineConfig } from "astro/config";
+import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [
-		starlight({
-			title: 'My Docs',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
-			sidebar: [
+  integrations: [
+    starlight({
+      title: "Forgetz Studio",
+
+      customCss: ["./src/styles/custom.css"],
+      favicon: "/src/assets/23.png",
+      social: [
+        {
+          icon: "github",
+          label: "GitHub",
+          href: "/",
+        },
+      ],
+
+      sidebar: [
+		    
+		 
+		 {
+			label: "GetStarted",
+			items:[
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
-					],
+					label:"start",
+					slug:"start/welcome"
 				},
-				{
-					label: 'Reference',
-					items: [{ autogenerate: { directory: 'reference' } }],
-				},
-			],
-		}),
-	],
+			]
+		 },
+
+
+        {
+          label: "Library",
+          items: [
+            {
+              autogenerate: {
+                directory: "library",
+              },
+            },
+          ],
+        },
+      ],
+    }),
+  ],
 });

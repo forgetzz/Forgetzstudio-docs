@@ -1,40 +1,185 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: Forgetzstudio
+description: Documentation for Forgetzstudio tools, packages, AI, machine learning, and technologies.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
+  tagline: Build, explore, and create with the Forgetzstudio ecosystem.
   image:
-    file: ../../assets/houston.webp
+    file: ../../assets/23.png
   actions:
-    - text: Example Guide
-      link: /guides/example/
-      icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
-      icon: external
+    - text: Get Started
+      link: /start/welcome/
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
+import TestimonialGrid from '../../components/testimonial-grid.astro';
+import Testimonial from '../../components/testimonial.astro';
+import Footer from '../../components/Footer.astro';
 
-## Next steps
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
-	</Card>
+
+<Card title="UI" icon="open-book">
+  Build modern interfaces with Forgetzstudio UI components and design systems.
+</Card>
+
+<Card title="NPM Packages" icon="package">
+  Explore reusable JavaScript and TypeScript packages built by Forgetzstudio.
+</Card>
+
+<Card title="AI & LLM" icon="rocket">
+  Explore LLM, AI agents, RAG, MCP, and other AI technologies.
+</Card>
+
+<Card title="Machine Learning" icon="seti">
+  Explore machine learning models, training, experiments, and inference.
+</Card>
+
+<Card title="Developer Tools" icon="setting">
+  Discover tools and utilities built to improve the development workflow.
+</Card>
+
+<Card title="Technologies" icon="document">
+  Learn about technologies, architectures, and experiments from Forgetzstudio.
+</Card>
+
 </CardGrid>
+
+
+## The Forgetzstudio Ecosystem
+
+Forgetzstudio is an ecosystem for developers building modern software.
+
+It brings together UI components, NPM packages, developer tools, artificial intelligence, large language models, and machine learning technologies.
+
+<CardGrid>
+
+<Card title="Build" icon="pencil">
+  Build applications using reusable tools and technologies.
+</Card>
+
+<Card title="Experiment" icon="beaker">
+  Explore new ideas, models, and technologies.
+</Card>
+
+<Card title="Learn" icon="open-book">
+  Read guides and technical documentation for the Forgetzstudio ecosystem.
+</Card>
+
+<Card title="Create" icon="add-document">
+  Turn ideas into real projects with Forgetzstudio.
+</Card>
+
+</CardGrid>
+
+<TestimonialGrid title="What people are saying">
+  <Testimonial
+    name="Rachel"
+    handle="rachelnabors"
+    cite="https://twitter.com/astrodotbuild/status/1724934718745915558"
+  >
+    Forgetzstudio has EVOLVED how modern UI can be built, and you can get everything you need right out of the box.
+  </Testimonial>
+
+  <Testimonial
+    name="Flavio"
+    handle="flaviocopes"
+    cite="https://twitter.com/flaviocopes/status/1738237658717905108"
+  >
+    Forgetzstudio is a truly incredible toolkit for building modern web interfaces and developer-focused products.
+  </Testimonial>
+
+  <Testimonial
+    name="Tomek"
+    handle="sulco"
+    cite="https://twitter.com/sulco/status/1735610348730802342"
+  >
+    Forgetzstudio is our go-to example of a great DX: the speed, convenience, and attention to detail is inspiring. It takes care of the UI and the tech, so you can focus on your product 👏
+
+    Our team absolutely loves it!
+  </Testimonial>
+
+  <Testimonial
+    name="Roberto"
+    handle="RmeetsH"
+    cite="https://twitter.com/RmeetsH/status/1735783992018760090"
+  >
+    Forgetzstudio has been a game-changer for me, allowing me to focus on building products instead of spending hours creating UI components.
+
+    Its intuitive design streamlines my workflow and makes development much more enjoyable.
+  </Testimonial>
+
+  <Testimonial
+    name="Joel"
+    handle="jhooks"
+    cite="https://twitter.com/jhooks/status/1727405160547418405"
+  >
+    Spent some more time with Forgetzstudio and it’s been great so far. Lots of nice touches, and I can focus on building my application instead of fiddling with the UI.
+  </Testimonial>
+
+  <Testimonial
+    name="Rick"
+    handle="rick_viscomi"
+    cite="https://twitter.com/rick_viscomi/status/1665867447910510593"
+  >
+    Started playing with Forgetzstudio. Gotta say I’m very impressed with the performance and developer experience out of the box.
+
+    💯💯💯💯
+  </Testimonial>
+
+  <Testimonial
+    name="Nicolas"
+    handle="beaussan"
+    cite="https://twitter.com/beaussan/status/1735625189583466893"
+  >
+    Forgetzstudio is one of the best ways to get started with modern UI development, combining powerful components with a fast and flexible developer experience.
+
+    It has been my go-to toolkit for a while now, and I keep on loving it!
+  </Testimonial>
+
+  <Testimonial
+    name="Sylwia"
+    handle="SylwiaVargas"
+    cite="https://x.com/SylwiaVargas/status/1726556825741578286"
+  >
+    I used Forgetzstudio in my last project and loved it. Great components, intuitive design, and a super-responsive developer experience. Very pleasant to work with.
+  </Testimonial>
+
+  <Testimonial
+    name="Lou Cyx"
+    handle="loucyx"
+    cite="https://elk.zone/m.webtoo.ls/@loucyx@mastodon.social/111587380021362284"
+  >
+    The UI on my project looks better than ever thanks to Forgetzstudio. It’s extremely easy to use without losing the flexibility and power needed for modern applications. Thank you for working on it!
+  </Testimonial>
+
+  <Testimonial
+    name="BowTiedWebReaper"
+    handle="BowTiedWebReapr"
+    cite="https://twitter.com/BowTiedWebReapr/status/1735633399501697517"
+  >
+    Forgetzstudio is my go-to toolkit for building interfaces. It made it super easy to add a modern UI system to my existing projects without needing to build everything from scratch.
+  </Testimonial>
+
+  <Testimonial
+    name="Jeff"
+    handle="J_Everhart383"
+    cite="https://twitter.com/J_Everhart383/status/1691900590048292908"
+  >
+    I’ve been rebuilding my application with Forgetzstudio. Trust me when I say it has everything you need to build a polished and professional UI platform 🙌
+  </Testimonial>
+
+  <Testimonial
+    name="Chloe"
+    handle="solelychloe"
+    cite="https://twitter.com/solelychloe/status/1695115277602628082"
+  >
+    Give Forgetzstudio a try!
+
+    I use it for a few of my projects and it’s great.
+  </Testimonial>
+</TestimonialGrid>
+
+
+<Footer/>

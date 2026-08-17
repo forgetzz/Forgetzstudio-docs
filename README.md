@@ -1,49 +1,102 @@
-# Starlight Starter Kit: Basics
+# ForgetzStudio
 
-[![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
+Modern tools, UI components, SDKs, and resources built for developers.
 
-```
-npm create astro@latest -- --template starlight
-```
+## 🚀 About ForgetzStudio
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+ForgetzStudio is a developer-focused platform for building modern applications faster.
 
-## 🚀 Project Structure
+Our ecosystem provides reusable tools, components, SDKs, and resources designed to simplify development while keeping projects flexible and maintainable.
 
-Inside of your Astro + Starlight project, you'll see the following folders and files:
+## 📦 Project Structure
 
-```
+This project is built with **Astro** and **Starlight**.
+
+```text
 .
 ├── public/
 ├── src/
 │   ├── assets/
+│   ├── components/
 │   ├── content/
 │   │   └── docs/
+│   ├── styles/
 │   └── content.config.ts
 ├── astro.config.mjs
 ├── package.json
 └── tsconfig.json
 ```
 
-Starlight looks for `.md` or `.mdx` files in the `src/content/docs/` directory. Each file is exposed as a route based on its file name.
+Documentation pages are located inside:
 
-Images can be added to `src/assets/` and embedded in Markdown with a relative link.
+```text
+src/content/docs/
+```
 
-Static assets, like favicons, can be placed in the `public/` directory.
+Each `.md` or `.mdx` file is automatically available as a documentation route.
 
-## 🧞 Commands
+Static files such as favicons and other public assets can be placed inside:
 
-All commands are run from the root of the project, from a terminal:
+```text
+public/
+```
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## 🛠️ Development
 
-## 👀 Want to learn more?
+Install the dependencies:
 
-Check out [Starlight’s docs](https://starlight.astro.build/), read [the Astro documentation](https://docs.astro.build), or jump into the [Astro Discord server](https://astro.build/chat).
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+The documentation site will be available at:
+
+```text
+http://localhost:4321
+```
+
+## 📦 Build
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+The generated website will be available inside:
+
+```text
+dist/
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## 📚 Documentation
+
+The ForgetzStudio documentation contains guides, references, SDK documentation, and resources for developers.
+
+## 🔗 Links
+
+* **Documentation:** ForgetzStudio Documentation
+* **GitHub:** ForgetzStudio
+* **Website:** ForgetzStudio
+
+## 🤝 Contributing
+
+Contributions, suggestions, and improvements are welcome.
+
+Feel free to open an issue or submit a pull request to help improve ForgetzStudio.
+
+## 📄 License
+
+This project is maintained by ForgetzStudio.

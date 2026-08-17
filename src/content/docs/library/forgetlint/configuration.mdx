@@ -1,0 +1,75 @@
+---
+title: Configuration
+description: Configure ForgetzLint for your project.
+---
+
+
+Forgetz Studio SDK provides configuration options that allow you to customize how its modules behave inside your application.
+
+The available configuration depends on the module and version of the SDK you are using.
+
+## Basic Configuration
+
+Configuration is normally provided when initializing a module or calling the relevant SDK function.
+
+```typescript
+import { ... } from '@forgetzstudio/sdk';
+
+const instance = ...;
+```
+
+Use only the configuration options supported by the module you are using.
+
+## Environment Variables
+
+Sensitive values such as API keys, secrets, and credentials should be stored in environment variables.
+
+Example:
+
+```env
+FORGETZ_API_KEY=your_api_key
+```
+
+Then access the value from your application configuration:
+
+```typescript
+const apiKey = process.env.FORGETZ_API_KEY;
+```
+
+Do not commit secrets or private credentials to your repository.
+
+## Configuration Options
+
+Configuration options vary depending on the SDK module.
+
+A configuration section should document each option with:
+
+| Option    | Type      | Description                              |
+| --------- | --------- | ---------------------------------------- |
+| `apiKey`  | `string`  | API key used by the module               |
+| `baseURL` | `string`  | Base URL used for requests               |
+| `debug`   | `boolean` | Enables additional debugging information |
+
+Only include options that are actually supported by the SDK.
+
+## Development Configuration
+
+For local development, you can use environment variables or a local configuration file.
+
+```env
+FORGETZ_API_KEY=your_api_key
+FORGETZ_DEBUG=true
+```
+
+Keep production credentials separate from local development credentials.
+
+## Production
+
+For production applications:
+
+* Store secrets securely.
+* Do not expose private API keys in client-side code.
+* Use environment variables for deployment-specific configuration.
+* Enable debugging only when necessary.
+
+For module-specific configuration, refer to the documentation for that module.
