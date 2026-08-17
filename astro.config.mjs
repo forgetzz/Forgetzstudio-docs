@@ -35,13 +35,32 @@ export default defineConfig({
         {
           label: "Library",
           items: [
-            {
-              autogenerate: {
-                directory: "library",
-              },
+                {
+                  label: "forgetzlint",
+                  items: [
+   {
+              label: "Introduction",
+              slug:"library/forgetzlint/introduction"
             },
+            {
+              label: "Installation",
+              slug:"library/forgetzlint/installation"
+            },
+            {
+              label: "Configuration",
+              slug:"library/forgetzlint/configuration"
+            },
+            {
+              label: "Usage",
+              slug:"library/forgetzlint/usage"
+            },
+                  ]
+                }
           ],
         },
+
+
+        
       ],
     }),
   ],

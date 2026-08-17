@@ -1,0 +1,107 @@
+---
+
+title: Configuration
+description: Configure ForgetzLint for your project.
+---
+
+ForgetzLint works without a configuration file and provides default rules out of the box.
+
+If you need to customize the rules, you can create a `forgetzlint.config.mjs` file in the root directory of your project.
+
+## Basic Configuration
+
+Create a `forgetzlint.config.mjs` file:
+
+```javascript
+export default {
+  rules: {
+    "no-console": "warning",
+    "no-debugger": "error",
+    "no-any": "off"
+  }
+};
+```
+
+The configuration file allows you to change the severity of each rule.
+
+## Configuration File
+
+The configuration file should be placed in your project root:
+
+```text
+my-project/
+├── src/
+├── package.json
+├── forgetzlint.config.mjs
+└── ...
+```
+
+ForgetzLint automatically uses the configuration when running from the project root.
+
+## Rule Severity
+
+Each rule can have one of three severity levels:
+
+| Severity  | Description                    |
+| --------- | ------------------------------ |
+| `error`   | Reports the issue as an error  |
+| `warning` | Reports the issue as a warning |
+| `off`     | Disables the rule              |
+
+For example:
+
+```javascript
+export default {
+  rules: {
+    "no-console": "warning",
+    "no-debugger": "off",
+    "no-any": "error"
+  }
+};
+```
+
+## Default Configuration
+
+If no configuration file is provided, ForgetzLint uses the following default rules:
+
+```javascript
+{
+  "no-console": "error",
+  "no-debugger": "error",
+  "no-any": "error"
+}
+```
+
+This means all three rules are enabled as errors by default.
+
+## Disabling Rules
+
+You can disable a rule by setting its severity to `off`.
+
+```javascript
+export default {
+  rules: {
+    "no-console": "off",
+    "no-debugger": "error",
+    "no-any": "off"
+  }
+};
+```
+
+In this example, `no-console` and `no-any` are disabled while `no-debugger` remains enabled.
+
+## Configuration Options
+
+ForgetzLint currently supports the following rules:
+
+| Option        | Type     | Description                             |
+| ------------- | -------- | --------------------------------------- |
+| `no-console`  | `string` | Detects the use of `console` statements |
+| `no-debugger` | `string` | Detects `debugger` statements           |
+| `no-any`      | `string` | Detects explicit `any` types            |
+
+Each option accepts `error`, `warning`, or `off`.
+
+## Next Steps
+
+Continue to the [Rules](./rules) guide to learn more about the rules available in ForgetzLint.

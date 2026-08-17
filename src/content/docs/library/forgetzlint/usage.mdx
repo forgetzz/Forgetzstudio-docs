@@ -1,0 +1,134 @@
+---
+
+title: Usage
+description: Learn how to use ForgetzLint.
+---
+
+After installing ForgetzLint, you can run it from your project root to check your TypeScript code.
+
+## Run ForgetzLint
+
+Run ForgetzLint using `npx`:
+
+```bash
+npx forgetzlint
+```
+
+Or with pnpm:
+
+```bash
+pnpm exec forgetzlint
+```
+
+ForgetzLint will scan your project and report detected code issues.
+
+## Check a Specific File
+
+You can also check an individual TypeScript file:
+
+```bash
+npx forgetzlint src/example.ts
+```
+
+This is useful when you only want to check a specific file instead of the entire project.
+
+## Package Script
+
+You can add ForgetzLint to your `package.json` scripts:
+
+```json
+{
+  "scripts": {
+    "lint": "forgetzlint"
+  }
+}
+```
+
+Then run:
+
+```bash
+npm run lint
+```
+
+Or with pnpm:
+
+```bash
+pnpm lint
+```
+
+## Basic Example
+
+Consider the following TypeScript code:
+
+```typescript
+const data: any = [];
+
+console.log(data);
+
+debugger;
+```
+
+When ForgetzLint runs with the default configuration, it will detect:
+
+* `console.log()` from the `no-console` rule
+* `debugger` from the `no-debugger` rule
+* `any` from the `no-any` rule
+
+## TypeScript
+
+ForgetzLint is designed for TypeScript projects and analyzes TypeScript source code to detect common issues.
+
+For example:
+
+```typescript
+function processData(data: any) {
+  console.log(data);
+}
+```
+
+The `no-any` and `no-console` rules can detect the issues in this example.
+
+## Using Configuration
+
+ForgetzLint automatically uses `forgetzlint.config.mjs` when it is available in your project root.
+
+```javascript
+export default {
+  rules: {
+    "no-console": "warning",
+    "no-debugger": "error",
+    "no-any": "off"
+  }
+};
+```
+
+This allows you to control which rules are enabled and how their issues are reported.
+
+## Linting Workflow
+
+A typical development workflow can look like this:
+
+```bash
+npm install forgetzlint
+npx forgetzlint
+```
+
+Or add it to your project scripts:
+
+```json
+{
+  "scripts": {
+    "lint": "forgetzlint"
+  }
+}
+```
+
+Then run:
+
+```bash
+npm run lint
+```
+
+For available rules and their behavior, continue to the [Rules](./rules) guide.
+
+For customizing ForgetzLint, see the [Configuration](./configuration) guide.
